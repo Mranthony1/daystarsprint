@@ -1,28 +1,26 @@
 const items = [
-  "Search",
+  "SEO",
   "Social",
   "Paid media",
-  "Identity",
+  "Branding",
   "Websites",
   "Campaigns",
   "Content",
-  "Brand systems",
+  "Identity",
 ];
 
 export function Ticker() {
   const row = [...items, ...items];
   return (
     <div
-      className="overflow-hidden border-b border-line bg-bone-deep/70 [mask-image:linear-gradient(90deg,transparent,#000_6%,#000_94%,transparent)]"
+      className="overflow-hidden border-b border-line bg-ink text-cloud [mask-image:linear-gradient(90deg,transparent,#000_8%,#000_92%,transparent)]"
       aria-hidden
     >
-      <div className="ticker-track flex w-max py-4">
+      <div className="ticker-track flex w-max py-3.5">
         {row.map((item, index) => (
           <span key={`${item}-${index}`} className="flex items-center">
-            <span className="px-4 text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-ink">
-              {item}
-            </span>
-            <span className="inline-block h-1.5 w-1.5 bg-signal" />
+            <span className="px-5 text-[0.68rem] font-medium uppercase tracking-[0.24em]">{item}</span>
+            <span className="h-px w-6 bg-flare" />
           </span>
         ))}
       </div>

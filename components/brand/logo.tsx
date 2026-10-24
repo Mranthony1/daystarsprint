@@ -6,20 +6,15 @@ export function Logo({ tone = "dark" }: { tone?: "dark" | "light" }) {
   return (
     <Link
       href="/"
-      aria-label="Daystarsprint, home"
+      aria-label="Tinatries, home"
       className={cn(
-        "inline-flex items-center gap-2.5 rounded-sm",
-        tone === "light" ? "text-bone" : "text-ink",
+        "inline-flex items-center gap-2.5",
+        tone === "light" ? "text-cloud" : "text-ink",
       )}
     >
-      <Mark className="h-9 w-9 shrink-0" />
-      <span className="leading-none" aria-hidden>
-        <span className="block font-sans text-[0.78rem] font-semibold tracking-[0.16em]">
-          DAYSTARS
-        </span>
-        <span className="mt-1 block font-display text-[1.15rem] italic leading-none tracking-[-0.03em] text-flare">
-          print
-        </span>
+      <Mark className="h-7 w-7 shrink-0" />
+      <span className="font-sans text-[1.05rem] font-medium tracking-[-0.04em]" aria-hidden>
+        Tinatries
       </span>
     </Link>
   );

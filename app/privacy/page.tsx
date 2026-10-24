@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/site-config";
 
 export const metadata = createMetadata({
   title: "Privacy",
-  description: "How the Daystarsprint website handles enquiries and optional analytics.",
+  description: "How the Tinatries website handles enquiries and optional analytics.",
   path: "/privacy",
 });
 

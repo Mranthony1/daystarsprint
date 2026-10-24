@@ -13,20 +13,20 @@ export function SelectedWork() {
       <Container className="py-20 md:py-28">
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div className="max-w-2xl">
-            <Kicker index="04">Selected studies</Kicker>
+            <Kicker index="03">Selected concepts</Kicker>
             <h2 className="mt-5 text-[clamp(2.4rem,4.6vw,4.2rem)] leading-[0.95]">
               Thinking you can look at.
             </h2>
             <p className="mt-4 max-w-xl text-ink-soft">
-              Studio studies — self-initiated concepts, shown as thinking. They are not client
-              projects and they are not results.
+              Studio concepts — self-initiated, and labeled as such. They are not client projects
+              and they are not results.
             </p>
           </div>
           <Link
-            href="/work"
+            href="/portfolio"
             className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-signal hover:text-ink"
           >
-            All studies
+            Explore all work
           </Link>
         </div>
         <div className="mt-12 grid gap-10 lg:grid-cols-2">

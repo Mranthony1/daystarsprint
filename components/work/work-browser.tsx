@@ -23,7 +23,7 @@ export function WorkBrowser() {
     if (filter === "all") next.delete("discipline");
     else next.set("discipline", filter);
     const query = next.toString();
-    router.replace(query ? `/work?${query}` : "/work", { scroll: false });
+    router.replace(query ? `/portfolio?${query}` : "/portfolio", { scroll: false });
   }
 
   const visible =
@@ -51,7 +51,7 @@ export function WorkBrowser() {
         })}
       </div>
       {visible.length === 0 ? (
-        <p className="mt-12 text-ink-soft">No studies in this discipline yet.</p>
+        <p className="mt-12 text-ink-soft">No concepts in this discipline yet.</p>
       ) : (
         <div className="mt-12 grid gap-x-8 gap-y-12 md:grid-cols-2">
           {visible.map((project) => (

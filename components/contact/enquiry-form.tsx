@@ -124,7 +124,7 @@ export function EnquiryForm({
         <p className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-signal">Sent</p>
         <h2 className="mt-4 text-4xl">The brief is with the studio.</h2>
         <p className="mt-4 max-w-lg text-ink-soft">
-          Your enquiry was delivered. Daystarsprint will read it and reply if there is a useful way
+          Your enquiry was delivered. Tinatries will read it and reply if there is a useful way
           to help. This form is not a booking, and a response time is not promised here.
         </p>
       </div>
@@ -281,7 +281,7 @@ export function EnquiryForm({
             onChange={(event) => update("consent", event.target.checked)}
           />
           <span>
-            Daystarsprint may use these details to respond to this enquiry. Read the{" "}
+            Tinatries may use these details to respond to this enquiry. Read the{" "}
             <Link href="/privacy" className="underline decoration-signal underline-offset-4">
               privacy note
             </Link>

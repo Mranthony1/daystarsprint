@@ -1,3 +1,4 @@
+import { AboutPreview } from "@/components/home/about-preview";
 import { ClosingCta } from "@/components/ui/closing-cta";
 import { Engagements } from "@/components/home/engagements";
 import { FaqList } from "@/components/home/faq-list";
@@ -7,7 +8,6 @@ import { Positioning } from "@/components/home/positioning";
 import { SelectedWork } from "@/components/home/selected-work";
 import { ServicesIndex } from "@/components/home/services-index";
 import { SignalSplit } from "@/components/home/signal-split";
-import { Standards } from "@/components/home/standards";
 import { Ticker } from "@/components/home/ticker";
 
 export default function HomePage() {
@@ -16,12 +16,12 @@ export default function HomePage() {
       <Hero />
       <Ticker />
       <Positioning />
-      <SignalSplit />
       <ServicesIndex />
       <SelectedWork />
+      <SignalSplit />
       <Method />
-      <Standards />
       <Engagements />
+      <AboutPreview />
       <FaqList />
       <ClosingCta />
     </>

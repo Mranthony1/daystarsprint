@@ -18,23 +18,23 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const { slug } = await params;
   const project = getProject(slug);
-  if (!project) return { title: "Study" };
+  if (!project) return { title: "Concept" };
   return createMetadata({
-    title: `${project.title} studio study`,
+    title: `${project.title} studio concept`,
     description: project.summary,
-    path: `/work/${project.slug}`,
+    path: `/portfolio/${project.slug}`,
   });
 }
 
-export default function StudyPage({ params }: { params: Params }) {
+export default function ConceptPage({ params }: { params: Params }) {
   return (
-    <Suspense fallback={<Container className="py-24 text-mute">Loading study…</Container>}>
-      <StudyContent params={params} />
+    <Suspense fallback={<Container className="py-24 text-mute">Loading concept…</Container>}>
+      <ConceptContent params={params} />
     </Suspense>
   );
 }
 
-async function StudyContent({ params }: { params: Params }) {
+async function ConceptContent({ params }: { params: Params }) {
   const { slug } = await params;
   const project = getProject(slug);
   if (!project) notFound();
@@ -45,14 +45,14 @@ async function StudyContent({ params }: { params: Params }) {
       <header className="border-b border-line">
         <Container className="py-14 md:py-20">
           <nav aria-label="Breadcrumb" className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-mute">
-            <Link href="/work" className="hover:text-signal">
-              Work
+            <Link href="/portfolio" className="hover:text-signal">
+              Portfolio
             </Link>
             <span aria-hidden> / </span>
             <span aria-current="page">{project.title}</span>
           </nav>
           <p className="mt-8 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-signal">
-            Studio study · {project.year}
+            Studio concept · {project.year}
           </p>
           <h1 className="mt-3 max-w-4xl text-[clamp(3rem,7vw,6.4rem)] leading-[0.9]">{project.title}</h1>
           <p className="mt-6 max-w-2xl text-xl leading-relaxed text-ink-soft">{project.summary}</p>
@@ -84,25 +84,25 @@ async function StudyContent({ params }: { params: Params }) {
       </div>
       <Container className="py-8">
         <p className="border border-signal/30 bg-sheet px-5 py-4 text-sm leading-relaxed text-ink-soft">
-          This is a studio study: a self-initiated concept used to show how the studio thinks. It is
+          This is a studio concept: a self-initiated study used to show how Tinatries thinks. It is
           not a client project, and it is not a result.
         </p>
       </Container>
       <section className="border-b border-line">
         <Container className="grid gap-12 py-12 md:grid-cols-2 md:py-16">
           <div>
-            <Kicker>The tension</Kicker>
+            <Kicker>The challenge</Kicker>
             <p className="mt-5 text-lg leading-relaxed text-ink-soft">{project.challenge}</p>
           </div>
           <div>
-            <Kicker>The response</Kicker>
+            <Kicker>The approach</Kicker>
             <p className="mt-5 text-lg leading-relaxed text-ink-soft">{project.response}</p>
           </div>
         </Container>
       </section>
       <section className="border-b border-line">
         <Container className="py-12 md:py-16">
-          <Kicker>What the study made</Kicker>
+          <Kicker>What the concept made</Kicker>
           <ul className="mt-6 grid gap-4 md:grid-cols-2">
             {project.made.map((item) => (
               <li key={item} className="border-t border-line pt-4 text-lg leading-snug">
@@ -115,12 +115,12 @@ async function StudyContent({ params }: { params: Params }) {
       <section>
         <Container className="flex flex-col gap-8 py-14 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-mute">Next study</p>
-            <Link href={`/work/${next.slug}`} className="mt-3 block font-display text-4xl hover:text-signal">
+            <p className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-mute">Next concept</p>
+            <Link href={`/portfolio/${next.slug}`} className="mt-3 block text-4xl hover:text-signal">
               {next.title}
             </Link>
           </div>
-          <ButtonLink href="/contact">Start a brief</ButtonLink>
+          <ButtonLink href="/contact">Start a project</ButtonLink>
         </Container>
       </section>
     </>

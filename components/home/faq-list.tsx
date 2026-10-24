@@ -7,7 +7,7 @@ export function FaqList() {
     <section className="border-b border-line">
       <Container className="grid gap-10 py-20 md:grid-cols-[0.7fr_1.3fr] md:py-28">
         <div>
-          <Kicker index="08">Questions</Kicker>
+          <Kicker index="06">Questions</Kicker>
           <h2 className="mt-5 text-[clamp(2.2rem,4vw,3.6rem)] leading-[0.95]">Before you write.</h2>
         </div>
         <div className="border-t border-line">

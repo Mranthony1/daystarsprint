@@ -1,8 +1,10 @@
-# Daystarsprint
+# Tinatries
 
-The Daystarsprint marketing site. Next.js App Router, TypeScript, and Tailwind CSS.
+The Tinatries marketing site. Next.js App Router, TypeScript, and Tailwind CSS.
 
-Daystarsprint is a premium digital marketing and creative studio. The site covers SEO, social media, paid advertising, branding, and web design. Projects in the work section are studio studies — self-initiated concepts, clearly labeled. They are not client results.
+Tinatries is a premium digital marketing and creative agency. The site covers SEO, social media, paid advertising, branding, and web design. Projects in the portfolio are studio concepts — self-initiated studies, clearly labeled. They are not client results.
+
+The visual system uses Cloud Dancer, the Pantone Color of the Year 2026, with Transformative Teal, the WGSN and Coloro Colour of the Year 2026.
 
 ## Local development
 
@@ -43,7 +45,7 @@ Public values are safe to expose. They are omitted from the interface when empty
 | `NEXT_PUBLIC_ANALYTICS_DOMAIN` | Plausible domain |
 | `RESEND_API_KEY` | Server-only Resend API key |
 | `CONTACT_TO_EMAIL` | Inbox that receives enquiries |
-| `CONTACT_FROM_EMAIL` | Verified Resend sender, for example `Daystarsprint <enquiries@yourdomain.com>` |
+| `CONTACT_FROM_EMAIL` | Verified Resend sender, for example `Tinatries <enquiries@yourdomain.com>` |
 
 The enquiry form reports success only after Resend accepts the message. Until all three server variables are set, submissions are rejected and are not stored.
 
@@ -55,8 +57,8 @@ Edit the TypeScript modules rather than scattering copy through components.
 
 - `lib/site-config.ts` — brand lines; contact details come from the environment
 - `lib/services.ts` — five services
-- `lib/projects.ts` — studio studies, labeled as self-initiated
-- `lib/studio.ts` — method, standards, engagements, and questions
+- `lib/projects.ts` — studio concepts, labeled as self-initiated
+- `lib/studio.ts` — process, standards, engagements, and questions
 
 Do not add testimonials, client logos, team names, or performance figures until they are real and permitted.
 
@@ -68,4 +70,4 @@ Privacy and terms pages are drafts for review. They are not legal advice.
 2. Set `NEXT_PUBLIC_SITE_URL` to the production origin.
 3. Set the contact and Resend variables if the form should deliver email.
 4. Run `npm run build`.
-5. Confirm the contact form, sitemap (`/sitemap.xml`), and a service and study URL on the live domain.
+5. Confirm the contact form, sitemap (`/sitemap.xml`), and a service and concept URL on the live domain.

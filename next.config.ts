@@ -3,6 +3,13 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   cacheComponents: true,
   partialPrefetching: true,
+  async redirects() {
+    return [
+      { source: "/work", destination: "/portfolio", permanent: true },
+      { source: "/work/:slug", destination: "/portfolio/:slug", permanent: true },
+      { source: "/approach", destination: "/about", permanent: true },
+    ];
+  },
   async headers() {
     return [
       {

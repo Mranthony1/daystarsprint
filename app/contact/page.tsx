@@ -11,7 +11,7 @@ import { whatsappHref } from "@/lib/utils";
 export const metadata = createMetadata({
   title: "Contact",
   description:
-    "Start a brief with Daystarsprint. Tell the studio about the business, the audience, and the work you want to change.",
+    "Start a project with Tinatries. Tell us about the business, the goals, and the help you need.",
   path: "/contact",
 });
 
@@ -22,10 +22,10 @@ type ContactPageProps = {
 export default function ContactPage({ searchParams }: ContactPageProps) {
   return (
     <>
-      <PageHeader index="DS—P" eyebrow="Contact" title="Tell us what should be unmistakable.">
+      <PageHeader eyebrow="Contact" title="Let’s build something that moves the business forward.">
         <p>
-          Describe the business, who it is for, and the change you want. A polished brief is not
-          required. A direct one is.
+          Tell us a little about the business, the goals, and the help you need. Tinatries will use
+          it to understand the project and decide the most useful next step.
         </p>
       </PageHeader>
       <section>
@@ -34,7 +34,7 @@ export default function ContactPage({ searchParams }: ContactPageProps) {
             <h2 className="text-3xl">What happens next</h2>
             <ol className="mt-5 space-y-4 text-ink-soft">
               <li>1. You send enough context for the studio to understand the work.</li>
-              <li>2. Daystarsprint reads it and replies if there is a useful way to help.</li>
+              <li>2. Tinatries reads it and replies if there is a useful way to help.</li>
               <li>3. A proposal, if one is warranted, defines scope before any commitment.</li>
             </ol>
             <p className="mt-5 text-sm leading-relaxed text-mute">

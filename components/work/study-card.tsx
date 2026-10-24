@@ -14,7 +14,7 @@ export function StudyCard({
 }) {
   return (
     <article className={cn(featured && "lg:row-span-2")}>
-      <Link href={`/work/${project.slug}`} className="group block">
+      <Link href={`/portfolio/${project.slug}`} className="group block">
         <div
           className={cn(
             "overflow-hidden border border-line",
@@ -30,7 +30,7 @@ export function StudyCard({
             <p className="text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-mute">
               {project.sector}
               <span aria-hidden> · </span>
-              Studio study
+              Studio concept
             </p>
             <h3 className={cn("mt-2 leading-none", compact ? "text-3xl" : "text-4xl")}>{project.title}</h3>
           </div>

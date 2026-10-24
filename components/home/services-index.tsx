@@ -9,7 +9,7 @@ export function ServicesIndex({ detailed = false }: { detailed?: boolean }) {
       <Container className="pt-20 md:pt-28">
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div className="max-w-2xl">
-            <Kicker index="03">Services</Kicker>
+            <Kicker index="02">Services</Kicker>
             <h2 className="mt-5 text-[clamp(2.4rem,4.6vw,4.2rem)] leading-[0.95]">
               {detailed ? "Five ways in. One standard of finish." : "What the studio actually does."}
             </h2>

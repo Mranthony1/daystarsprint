@@ -1,9 +1,9 @@
 export const serviceOptions = [
-  { value: "seo", label: "Search and SEO" },
-  { value: "social", label: "Social media" },
+  { value: "seo", label: "Search engine optimization" },
+  { value: "social", label: "Social media marketing" },
   { value: "paid", label: "Paid advertising" },
-  { value: "branding", label: "Brand identity" },
-  { value: "web", label: "Web design and build" },
+  { value: "branding", label: "Branding and creative strategy" },
+  { value: "web", label: "Web design and development" },
   { value: "multiple", label: "Several of these" },
   { value: "unsure", label: "Not sure yet" },
 ] as const;
@@ -50,9 +50,10 @@ export const contactMethodValues = contactMethodOptions.map((option) => option.v
 ];
 
 export const engagementOptions = [
-  { value: "imprint", label: "Imprint — a defined project" },
-  { value: "orbit", label: "Orbit — a monthly practice" },
-  { value: "constellation", label: "Constellation — brand, site, and media" },
+  { value: "project", label: "Project — a defined piece of work" },
+  { value: "retainer", label: "Retainer — ongoing marketing" },
+  { value: "campaign", label: "Campaign — a bounded push" },
+  { value: "custom", label: "Custom — brand, site, and media" },
 ] as const;
 
 export const engagementValues = engagementOptions.map((option) => option.value) as [

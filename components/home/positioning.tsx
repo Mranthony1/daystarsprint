@@ -27,7 +27,7 @@ export function Positioning() {
           <div>
             <Kicker index="01">The practice</Kicker>
             <h2 className="mt-5 text-[clamp(2.4rem,4.6vw,4.2rem)] leading-[0.95]">
-              Most marketing starts with a channel and hopes a brand appears.
+              Most marketing starts with a tactic and hopes a brand appears.
             </h2>
           </div>
           <p className="max-w-xl text-lg leading-relaxed text-ink-soft lg:pb-2">

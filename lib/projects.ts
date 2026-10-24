@@ -11,11 +11,11 @@ export type Project = {
 };
 
 export const disciplineLabels: Record<Project["disciplines"][number], string> = {
-  seo: "Search",
-  social: "Social",
-  paid: "Paid",
-  branding: "Brand",
-  web: "Web",
+  seo: "SEO",
+  social: "Social Media",
+  paid: "Paid Advertising",
+  branding: "Branding",
+  web: "Web Design",
 };
 
 export const projects: Project[] = [
