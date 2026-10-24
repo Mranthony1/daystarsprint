@@ -24,7 +24,7 @@ export async function deliverEnquiry(input: EnquiryInput) {
   }
 
   const text = [
-    "New project enquiry from the Tinatries website.",
+    "New project enquiry from the Daystarsprint website.",
     "",
     line("Name", input.fullName),
     line("Email", input.email),

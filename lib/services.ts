@@ -15,7 +15,7 @@ export const services: Service[] = [
   {
     slug: "seo",
     number: "01",
-    title: "Search Engine Optimization",
+    title: "Search and SEO",
     short: "Be the answer when the search is serious.",
     summary:
       "A search practice for companies that should be found for the work they actually do — not for a pile of loosely related phrases.",
@@ -34,7 +34,6 @@ export const services: Service[] = [
       "A content plan for the searches worth winning",
       "Internal linking that gives priority pages a path",
       "A plain-language view of what changed and what to watch",
-      "Local search support where the business serves a specific place",
     ],
     fit: [
       "Companies with a site that should earn attention over time.",
@@ -51,12 +50,12 @@ export const services: Service[] = [
   {
     slug: "social",
     number: "02",
-    title: "Social Media Marketing",
+    title: "Social media",
     short: "A presence with a point of view.",
     summary:
       "Planning, creative, and a publishing rhythm a real team can keep — so the feed sounds like the company, not like a content calendar on autopilot.",
     narrative:
-      "Social is where a brand is met in passing. That only works when the point of view is already decided. This practice covers organic social: the strategy, the creative, the publishing rhythm, and how replies are handled. Paid social is a separate advertising engagement, with its own budget. We shape the subjects worth repeating, the way they should look and sound, and a cadence the business can sustain after the novelty wears off.",
+      "Social is where a brand is met in passing. That only works when the point of view is already decided. We shape the subjects worth repeating, the way they should look and sound, and a cadence the business can sustain after the novelty wears off.",
     problems: [
       "Posting happens when someone remembers, so the brand feels intermittent.",
       "The feed looks busy and still does not say what the company is for.",
@@ -86,12 +85,12 @@ export const services: Service[] = [
   {
     slug: "paid",
     number: "03",
-    title: "Paid Advertising",
+    title: "Paid advertising",
     short: "Spend where the brief is clear.",
     summary:
       "Campaigns with an offer, an audience, and a place to land. Media is adjusted against a commercial goal, not against the comfort of a busy dashboard.",
     narrative:
-      "Paid media is a precise instrument and an easy way to waste money. We start with the offer and the person it is for, build the path from the ad to a page that continues the sentence, and change the spend when the evidence says to. Media budgets are separate from agency fees. Sales, leads, and returns are not guaranteed.",
+      "Paid media is a precise instrument and an easy way to waste money. We start with the offer and the person it is for, build the path from the ad to a page that continues the sentence, and change the spend when the evidence says to.",
     problems: [
       "Money is boosting posts that have nowhere useful to send people.",
       "Campaigns launch without an offer a stranger can understand.",
@@ -121,7 +120,7 @@ export const services: Service[] = [
   {
     slug: "branding",
     number: "04",
-    title: "Branding and Creative Strategy",
+    title: "Brand identity",
     short: "Recognizable before the sentence ends.",
     summary:
       "Naming support when it is needed, a visual and verbal system, and the rules that keep a company consistent once more than one person is making things.",
@@ -155,7 +154,7 @@ export const services: Service[] = [
   {
     slug: "web",
     number: "05",
-    title: "Web Design and Development",
+    title: "Web design and build",
     short: "A site that earns the next conversation.",
     summary:
       "Design and engineering for sites that explain the offer, carry the brand, and give a person a clear way to enquire — built to stay fast and understandable.",

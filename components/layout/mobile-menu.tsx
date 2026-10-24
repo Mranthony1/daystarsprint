@@ -3,7 +3,6 @@
 import { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { Logo } from "@/components/brand/logo";
 import { isActivePath, navItems } from "@/lib/navigation";
 
@@ -18,12 +17,6 @@ export function MobileMenu({
 }) {
   const closeRef = useRef<HTMLButtonElement>(null);
   const dialogRef = useRef<HTMLDivElement>(null);
-  const router = useRouter();
-
-  function go(href: string) {
-    onClose(false);
-    router.push(href);
-  }
 
   useEffect(() => {
     if (!open) return;
@@ -69,9 +62,9 @@ export function MobileMenu({
       role="dialog"
       aria-modal="true"
       aria-label="Site menu"
-      className="fixed inset-0 z-[60] flex flex-col bg-ink text-cloud"
+      className="fixed inset-0 z-[60] flex flex-col bg-ink text-bone"
     >
-      <div className="flex h-16 items-center justify-between border-b border-cloud/15 px-5">
+      <div className="flex h-16 items-center justify-between border-b border-bone/15 px-5">
         <Logo tone="light" />
         <button
           ref={closeRef}
@@ -82,7 +75,7 @@ export function MobileMenu({
           Close
         </button>
       </div>
-      <nav className="flex flex-1 flex-col justify-center gap-2 px-5" aria-label="Mobile">
+      <nav className="flex flex-1 flex-col justify-center gap-3 px-5" aria-label="Mobile">
         {navItems.map((item) => {
           const active = isActivePath(pathname, item.href);
           return (
@@ -90,11 +83,11 @@ export function MobileMenu({
               key={item.href}
               href={item.href}
               aria-current={active ? "page" : undefined}
-              onClick={() => go(item.href)}
-              className="flex items-center gap-4 py-2 text-5xl leading-none tracking-[-0.05em] text-cloud"
+              onClick={() => onClose(false)}
+              className="font-display text-5xl leading-none tracking-[-0.04em] text-bone"
             >
-              {active ? <span className="h-8 w-1.5 bg-flare" aria-hidden /> : null}
               {item.label}
+              {active ? <span className="ml-3 text-flare">●</span> : null}
             </Link>
           );
         })}
@@ -102,10 +95,10 @@ export function MobileMenu({
       <div className="px-5 pb-8">
         <Link
           href="/contact"
-          onClick={() => go("/contact")}
+          onClick={() => onClose(false)}
           className="btn-signal inline-flex min-h-12 w-full items-center justify-center bg-signal px-5 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-sheet"
         >
-          Start a project
+          Start a brief
         </Link>
       </div>
     </div>,

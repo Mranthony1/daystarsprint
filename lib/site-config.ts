@@ -22,13 +22,13 @@ const social = {
 };
 
 export const siteConfig = {
-  name: "Tinatries",
-  tagline: "Make your brand impossible to ignore.",
-  campaignHeadline: "Strategy, creative, and performance in one practice.",
+  name: "Daystarsprint",
+  tagline: "Seen clearly. Remembered after.",
+  campaignHeadline: "Leave a mark they can’t unsee.",
   statement:
-    "Tinatries plans the brand, builds the website, and runs the marketing as one practice.",
+    "Daystarsprint plans the brand, builds the website, and runs the marketing as one practice.",
   description:
-    "Tinatries is a premium digital marketing and creative agency. SEO, social media, paid advertising, branding, and web design for ambitious companies.",
+    "Daystarsprint is a premium digital marketing and creative studio. SEO, social media, paid advertising, branding, and web design for ambitious companies in Ghana and beyond.",
   url: siteUrl(),
   locale: "en",
   contentUpdated: "2026-10-24",
@@ -42,7 +42,7 @@ export const siteConfig = {
   },
   social,
   schedulingUrl: safeHttpUrl(process.env.NEXT_PUBLIC_SCHEDULING_URL),
-  whatsappMessage: "Hello Tinatries, I would like to talk about a project.",
+  whatsappMessage: "Hello Daystarsprint, I would like to talk about a project.",
 } as const;
 
 export const socialLinks = [

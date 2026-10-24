@@ -14,7 +14,7 @@ export function createMetadata({
     description,
     alternates: { canonical: path },
     openGraph: {
-      title: `${title} — Tinatries`,
+      title: `${title} — Daystarsprint`,
       description,
       url: path,
     },

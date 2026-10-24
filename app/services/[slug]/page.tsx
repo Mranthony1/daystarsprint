@@ -46,7 +46,7 @@ async function ServiceContent({ params }: { params: Params }) {
     "@type": "Service",
     name: service.title,
     description: service.summary,
-    provider: { "@type": "Organization", name: "Tinatries" },
+    provider: { "@type": "Organization", name: "Daystarsprint" },
     serviceType: service.title,
   };
 
@@ -140,9 +140,9 @@ function ServiceBody({
         <section className="border-b border-line">
           <Container className="py-16 md:py-20">
             <div className="flex items-end justify-between gap-6">
-              <h2 className="text-4xl">Concepts in this discipline</h2>
-              <Link href={`/portfolio?discipline=${service.slug}`} className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-signal">
-                Filter the portfolio
+              <h2 className="text-4xl">Studies in this discipline</h2>
+              <Link href={`/work?discipline=${service.slug}`} className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-signal">
+                Filter the work
               </Link>
             </div>
             <div className="mt-10 grid gap-10 md:grid-cols-2">

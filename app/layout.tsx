@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Instrument_Sans, Instrument_Serif } from "next/font/google";
+import { Fraunces, Outfit } from "next/font/google";
 import { Suspense } from "react";
 import { Analytics } from "@/components/analytics/analytics";
 import { Footer } from "@/components/layout/footer";
@@ -7,47 +7,45 @@ import { Navbar, NavbarFallback } from "@/components/layout/navbar";
 import { siteConfig, socialLinks } from "@/lib/site-config";
 import "./globals.css";
 
-const sans = Instrument_Sans({
+const display = Fraunces({
   subsets: ["latin"],
-  variable: "--font-instrument",
+  variable: "--font-fraunces",
   display: "swap",
 });
 
-const serif = Instrument_Serif({
+const sans = Outfit({
   subsets: ["latin"],
-  weight: "400",
-  style: ["normal", "italic"],
-  variable: "--font-instrument-serif",
+  variable: "--font-outfit",
   display: "swap",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Tinatries — Make your brand impossible to ignore.",
-    template: "%s — Tinatries",
+    default: "Daystarsprint — Seen clearly. Remembered after.",
+    template: "%s — Daystarsprint",
   },
   description: siteConfig.description,
-  applicationName: "Tinatries",
+  applicationName: "Daystarsprint",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
-    siteName: "Tinatries",
+    siteName: "Daystarsprint",
     locale: "en",
-    title: "Tinatries — Make your brand impossible to ignore.",
+    title: "Daystarsprint — Seen clearly. Remembered after.",
     description: siteConfig.description,
     url: "/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tinatries",
+    title: "Daystarsprint",
     description: siteConfig.description,
   },
   robots: { index: true, follow: true },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#F3F1EB",
+  themeColor: "#F4EFE6",
   width: "device-width",
   initialScale: 1,
 };
@@ -55,7 +53,7 @@ export const viewport: Viewport = {
 const organization = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "Tinatries",
+  name: "Daystarsprint",
   description: siteConfig.description,
   url: siteConfig.url,
   slogan: siteConfig.tagline,
@@ -76,8 +74,8 @@ const organization = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${sans.variable} ${serif.variable} h-full antialiased`}>
-      <body className="min-h-full bg-cloud font-sans text-ink">
+    <html lang="en" className={`${display.variable} ${sans.variable} h-full antialiased`}>
+      <body className="min-h-full bg-bone font-sans text-ink">
         <a className="skip-link" href="#content">
           Skip to content
         </a>

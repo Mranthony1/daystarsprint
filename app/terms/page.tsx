@@ -4,7 +4,7 @@ import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
   title: "Terms",
-  description: "Draft terms for using the Tinatries website and reading its studio concepts.",
+  description: "Draft terms for using the Daystarsprint website and reading its studio studies.",
   path: "/terms",
 });
 
@@ -22,7 +22,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-3xl text-ink">Using the site</h2>
             <p className="mt-3">
-              You may browse Tinatries and send an enquiry. You may not misuse the form, attempt
+              You may browse Daystarsprint and send an enquiry. You may not misuse the form, attempt
               to break the site, or present its contents as your own client work.
             </p>
           </section>
@@ -47,7 +47,7 @@ export default function TermsPage() {
             <h2 className="text-3xl text-ink">The studio’s material</h2>
             <p className="mt-3">
               The writing, mark, layout, and original study artwork on this site belong to
-              Tinatries unless a page says otherwise. You may share a link. You may not copy
+              Daystarsprint unless a page says otherwise. You may share a link. You may not copy
               the site design or the studies and present them as another studio’s work.
             </p>
           </section>

@@ -7,13 +7,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const paths = [
     "",
     "/services",
-    "/portfolio",
+    "/work",
+    "/approach",
     "/about",
     "/contact",
     "/privacy",
     "/terms",
     ...services.map((service) => `/services/${service.slug}`),
-    ...projects.map((project) => `/portfolio/${project.slug}`),
+    ...projects.map((project) => `/work/${project.slug}`),
   ];
 
   return paths.map((path) => ({
