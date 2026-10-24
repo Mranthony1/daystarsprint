@@ -70,7 +70,7 @@ export function MobileMenu({
           ref={closeRef}
           type="button"
           className="inline-flex min-h-11 items-center px-2 text-[0.68rem] font-semibold uppercase tracking-[0.18em]"
-          onClick={onClose}
+          onClick={() => onClose()}
         >
           Close
         </button>
