@@ -1,0 +1,198 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-bone: #f4efe6;
+  --color-bone-deep: #e6ddd0;
+  --color-sheet: #fbf8f3;
+  --color-ink: #141210;
+  --color-ink-soft: #3a342e;
+  --color-mute: #5c554c;
+  --color-signal: #c43222;
+  --color-flare: #e23b2a;
+  --color-gold: #c6922e;
+  --color-line: rgb(20 18 16 / 14%);
+  --font-sans: var(--font-outfit), sans-serif;
+  --font-display: var(--font-fraunces), Georgia, serif;
+}
+
+html {
+  background: var(--color-bone);
+  color-scheme: light;
+  scroll-padding-top: 5.5rem;
+}
+
+body {
+  background: var(--color-bone);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+::selection {
+  background: #e23b2a;
+  color: #fbf8f3;
+}
+
+:focus-visible {
+  outline: 2px solid #c43222;
+  outline-offset: 3px;
+}
+
+.btn-signal:focus-visible {
+  outline-color: #141210;
+}
+
+[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 0.75rem;
+  z-index: 80;
+  transform: translateY(-150%);
+  background: #c43222;
+  color: #fbf8f3;
+  padding: 0.65rem 0.9rem;
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary {
+  list-style: none;
+}
+
+.field {
+  width: 100%;
+  min-height: 3rem;
+  border: 1px solid rgb(20 18 16 / 22%);
+  background: #fbf8f3;
+  color: #141210;
+  padding: 0.8rem 0.9rem;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.field::placeholder {
+  color: #8a8176;
+}
+
+.field:focus {
+  border-color: #141210;
+  outline: none;
+}
+
+.field[aria-invalid="true"] {
+  border-color: #c43222;
+}
+
+.select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' fill='none' stroke='%23141210' stroke-width='1.4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.9rem center;
+  background-size: 12px;
+  padding-right: 2.4rem;
+}
+
+.hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.ticker-track {
+  animation: ticker 38s linear infinite;
+}
+
+.spin-slow {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: spin 48s linear infinite;
+}
+
+.rise {
+  animation: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.art-zoom {
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.group:hover .art-zoom {
+  transform: scale(1.035);
+}
+
+@keyframes ticker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track,
+  .spin-slow,
+  .rise {
+    animation: none !important;
+  }
+
+  .art-zoom,
+  .group:hover .art-zoom {
+    transition: none;
+    transform: none;
+  }
+}
