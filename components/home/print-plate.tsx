@@ -1,17 +1,22 @@
 export function PrintPlate() {
   return (
     <figure className="relative mx-auto w-full max-w-[460px]">
-      <span className="absolute -left-2 -top-2 h-4 w-4 border-l border-t border-ink/50" aria-hidden />
-      <span className="absolute -right-2 -top-2 h-4 w-4 border-r border-t border-ink/50" aria-hidden />
-      <span className="absolute -bottom-2 -left-2 h-4 w-4 border-b border-l border-ink/50" aria-hidden />
-      <span className="absolute -right-2 -bottom-2 h-4 w-4 border-r border-b border-ink/50" aria-hidden />
-      <div className="border border-ink/15 bg-sheet p-3 shadow-[0_28px_70px_-36px_rgba(20,18,16,0.65)] sm:p-4">
+      <div>
         <svg viewBox="0 0 480 560" role="img" aria-labelledby="plate-title plate-desc" className="h-auto w-full">
           <title id="plate-title">Daystarsprint registration plate</title>
           <desc id="plate-desc">
             A printer’s registration mark. Scattered strokes sit on the left. A single star sits on the right.
           </desc>
-          <rect width="480" height="560" fill="#FBF8F3" />
+          <defs>
+            <radialGradient id="plate-fade" cx="240" cy="270" r="340" gradientUnits="userSpaceOnUse">
+              <stop offset="62%" stopColor="#ffffff" />
+              <stop offset="100%" stopColor="#000000" />
+            </radialGradient>
+            <mask id="plate-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="480" height="560">
+              <rect width="480" height="560" fill="url(#plate-fade)" />
+            </mask>
+          </defs>
+          <g mask="url(#plate-mask)">
           <text x="28" y="42" fill="#5C554C" fontSize="13" fontFamily="Outfit, sans-serif" letterSpacing="2.4">
             DS—P
           </text>
@@ -60,6 +65,7 @@ export function PrintPlate() {
           <rect x="128" y="492" width="96" height="14" fill="#C43222" />
           <rect x="228" y="492" width="96" height="14" fill="#C6922E" />
           <rect x="328" y="492" width="96" height="14" fill="#E6DDD0" />
+          </g>
         </svg>
       </div>
       <figcaption className="mt-4 flex items-center justify-between gap-4 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-mute">
